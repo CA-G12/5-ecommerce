@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
-
 :root {
   --blue: #77a2e7;
   --gray: #787885;
@@ -118,8 +117,7 @@ nav .logo {
   margin: 12px;
   padding: 8px;
 }
-.card-container:hover {
-}
+
 #img-product {
   height: 50%;
   width: 90%;
