@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.homepage-main{
+    height: 99.9vh;
+    background-color: #77a2e7;
+}
+.home-page-section{
+    border-radius: 20px;
+    flex-direction: column ;
+    height:50% ;
+    width: 30%;
+    text-align: center  ;
+    color:  #77a2e7;
+    font-size: 1.8rem;
+    justify-content: space-around;
+    background-color: white;
+}
+.landing-page-button{
+    width: 80%;
+    justify-content: space-between;
+}
+.landing-page-button button{
+    border:2px solid #617088;
+    border-radius: 20px;
+    background-color:  white;
+    padding: 1rem;
+    color:  #77a2e7;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+}
