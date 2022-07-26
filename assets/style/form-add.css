@@ -1,7 +1,6 @@
-/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"); */
 
 body {
-  font-family: "DM Sans", sans-serif;
+    font-family: 'Poppins','Times New Roman', Times, serif;
   line-height: 1.5;
   background-color: #f1f3fb;
   padding: 0 2rem;
@@ -22,7 +21,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 425px;
+  max-width: 300px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
@@ -32,11 +31,11 @@ input {
 .card-image {
   border-radius: 8px;
   overflow: hidden;
-  padding-bottom: 65%;
+  padding-bottom:40%;
   background-image: url("https://wallpaperaccess.com/full/2338264.jpg");
   background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: 0 5%;
+  background-size: 100%;
+  background-position: 0 50%;
   position: relative;
 }
 
@@ -51,14 +50,9 @@ input {
   line-height: 1.222;
   text-align: center;
 }
-small {
-  display: block;
-  font-size: 0.75em;
-  font-weight: 400;
-  margin-top: 0.25em;
-}
+
 .card-form {
-  padding: 2rem 1rem 0;
+  padding: 0 1rem ;
 }
 
 .input {
@@ -103,6 +97,7 @@ small {
 
 .action-button {
   font: inherit;
+  text-align: center;
   font-size: 1.25rem;
   padding: 1em;
   width: 100%;
@@ -115,15 +110,8 @@ small {
 .action-button:focus {
   outline: 0;
 }
+.action-button:hover{
+  background-color: #787885;
+}
 
-.card-info {
-  padding: 1rem 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  color: #8597a3;
-}
-.card-info a {
-  display: block;
-  color: #77a2e7;
-  text-decoration: none;
-}
+
