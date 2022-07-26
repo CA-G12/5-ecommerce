@@ -68,7 +68,7 @@ nav .logo{
 }
 
 .searchBox:hover > .searchButton {
-    background: black;
+    background-color: #40616d;
     color : #2f3640;
 }
 .button-container{
@@ -82,7 +82,11 @@ nav .logo{
     border-radius: 11%;
     outline: none;
 }
-
+a{
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
 .togglePage:hover{
     border: none;
     background-color:  #0096ce;
@@ -94,3 +98,53 @@ nav .logo{
 }
 
 /* End Styling Navbar */
+
+/* Styling Drop down menu */
+.category-section{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.category-list{
+    display: flex;
+    list-style: none;
+    padding: 10px 50px;
+    justify-content: space-around;
+    align-items: center;
+    color: #363434;
+}
+
+.category-list li{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-list li:hover{
+    border: none;
+    border-radius: 10%;
+    color: #fff;
+    box-shadow: 3px 20px 25px rgb(212, 209, 209);
+    transform: scale(1.1);
+    transition: transform 100ms;
+    cursor: pointer;
+}
+
+.category-list li .fa{
+    color: #0096ce;
+    font-size: 22px;
+    margin-bottom:10px;
+}
+
+.category{
+    border-radius: 5px;
+    margin-top:50px;
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+    align-self: flex-end;
+    margin-right: 80px;
+}
+
+/* End Styling Drop down menu  */
