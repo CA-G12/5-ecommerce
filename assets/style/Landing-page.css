@@ -12,6 +12,10 @@
 .homepage-main{
     height: 99.9vh;
     background-color: #77a2e7;
+    background-image: url('https://images.unsplash.com/photo-1596213412524-b063f73c7249?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .home-page-section{
     border-radius: 20px;
@@ -24,6 +28,7 @@
     font-size: 1.7rem;
     justify-content: space-around;
     background-color: white;
+    box-shadow: 5px 10px 10px  #888888;
 }
 .landing-page-button{
     width: 60%;
