@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins','Times New Roman', Times, serif;
+}
+
+/* Start styling navbar */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbf8f8;
+    padding:  10px 50px;
+}
+
+nav .logo{
+    height: 70px;
+    width: 70px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.searchBox {
+    background: #bac3cf;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+.searchButton {
+    color: white;
+    background-color: #667a95;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+    background: black;
+    color : #2f3640;
+}
+.button-container{
+    display: flex;
+}
+
+.togglePage{
+    width: 112px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 11%;
+    outline: none;
+}
+
+.togglePage:hover{
+    border: none;
+    background-color:  #0096ce;
+    color: #fff;
+    box-shadow: 0 6.5px 22.5px 0 rgba(3, 17, 24, 0.502);
+    transform: scale(1.1);
+    transition: transform 100ms;
+    cursor: pointer;
+}
+
+/* End Styling Navbar */
