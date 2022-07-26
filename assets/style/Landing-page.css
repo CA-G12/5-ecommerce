@@ -16,16 +16,17 @@
 .home-page-section{
     border-radius: 20px;
     flex-direction: column ;
-    height:50% ;
-    width: 30%;
+    height:55% ;
+    width: 40%;
+    padding-top: 1rem;
     text-align: center  ;
     color:  #77a2e7;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     justify-content: space-around;
     background-color: white;
 }
 .landing-page-button{
-    width: 80%;
+    width: 60%;
     justify-content: space-between;
 }
 .landing-page-button button{
@@ -37,4 +38,8 @@
     font-weight: 900;
     font-size: 1rem;
     cursor: pointer;
+}
+.landing-page-button button:hover{
+    background-color: #0096ce;
+    color:white;
 }
