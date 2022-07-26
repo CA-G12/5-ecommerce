@@ -74,13 +74,8 @@ nav .logo {
 }
 
 .searchBox:hover > .searchButton {
-<<<<<<< HEAD
-  background: black;
-  color: #2f3640;
-=======
     background-color: #40616d;
     color : #2f3640;
->>>>>>> f3a24595e08c5733272217efc8608da793b79593
 }
 .button-container {
   display: flex;
@@ -93,7 +88,6 @@ nav .logo {
   border-radius: 11%;
   outline: none;
 }
-<<<<<<< HEAD
 
 .togglePage:hover {
   border: none;
@@ -123,8 +117,7 @@ nav .logo {
   margin: 12px;
   padding: 8px;
 }
-.card-container:hover {
-}
+
 #img-product {
   height: 50%;
   width: 90%;
@@ -177,12 +170,12 @@ nav .logo {
 }
 
 /* End Styling Navbar */
-=======
 a{
     text-decoration: none;
     font-size: 17px;
     letter-spacing: 1px;
 }
+
 .togglePage:hover{
     border: none;
     background-color:  #0096ce;
@@ -244,4 +237,3 @@ a{
 }
 
 /* End Styling Drop down menu  */
->>>>>>> f3a24595e08c5733272217efc8608da793b79593
