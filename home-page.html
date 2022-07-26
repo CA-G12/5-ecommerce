@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style/home-page.css">
-    <link rel="shortcut icon" href="./assets/e-commerce icon.webp" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/home-page.css" />
+    <link
+    rel="shortcut icon"
+    href="./assets/e-commerce icon.webp"
+    type="image/x-icon"
+    />
     <title>Products Page</title>
 </head>
 <body>
+    <header>
     <nav>
         <div class="logo-container">
-        <img src="./assets/commerce-logo.png" alt="This is e-commerce logo" class="logo">
-        <h1 class="title">Strotify</h1> 
+        <img
+            src="./assets/commerce-logo.png"
+            alt="This is e-commerce logo"
+            class="logo"
+        />
+        <h1 class="title">Strotify</h1>
         </div>
         <div class="button-container">
             <div class="searchBox">
@@ -26,59 +35,233 @@
             </button>
         </div>
     </nav>
+    </header>
+    <main>
+        <section class="category-section">
+            <ul class="category-list">
+                <li>
+                    <i class="fa fa-link" aria-hidden="true"></i>
+                    <a href="">Electronics</a>
+                </li>
+                <li>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <a href="">Clothes</a>
+                </li>
+                <li>
+                    <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    <a href="">Shoes</a>
+                </li>
+                <li>
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    <a href="">Books</a>
+                </li>
+                <li>
+                    <i class="fa fa-gamepad" aria-hidden="true"></i>
+                    <a href="">Music</a>
+                </li>
+                <li>
+                    <i class="fa fa-link" aria-hidden="true"></i>
+                    <a href="">Furnitures</a>
+                </li>
+                <li>
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    <a href="">Food</a>
+                </li>
+                <li>
+                    <i class="fa fa-gamepad" aria-hidden="true"></i>
+                    <a href="">Toys</a>
+                </li>
+                <li>
+                    <i class="fa fa-bed" aria-hidden="true"></i>
+                    <a href="">Entertainment</a>
+                </li>
+            </ul>
 
-    <section class="category-section">
-        <ul class="category-list">
-            <li>
-                <i class="fa fa-link" aria-hidden="true"></i>
-                <a href="">Electronics</a>
-            </li>
-            <li>
-                <i class="fa fa-heart" aria-hidden="true"></i>
-                <a href="">Clothes</a>
-            </li>
-            <li>
-                <i class="fa fa-asterisk" aria-hidden="true"></i>
-                <a href="">Shoes</a>
-            </li>
-            <li>
-                <i class="fa fa-book" aria-hidden="true"></i>
-                <a href="">Books</a>
-            </li>
-            <li>
-                <i class="fa fa-gamepad" aria-hidden="true"></i>
-                <a href="">Music</a>
-            </li>
-            <li>
-                <i class="fa fa-link" aria-hidden="true"></i>
-                <a href="">Furnitures</a>
-            </li>
-            <li>
-                <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                <a href="">Food</a>
-            </li>
-            <li>
-                <i class="fa fa-gamepad" aria-hidden="true"></i>
-                <a href="">Toys</a>
-            </li>
-            <li>
-                <i class="fa fa-bed" aria-hidden="true"></i>
-                <a href="">Entertainment</a>
-            </li>
-        </ul>
-        
-        <select name="category" id="category" class="category">
-            <option value="Electronics">Electronics</option>
-            <option value="Clothes">Clothes</option>
-            <option value="Shoes">Shoes</option>
-            <option value="Furnitures">Furnitures</option>
-            <option value="Books">Books</option>
-            <option value="Music">Music</option>
-            <option value="Food">Food</option>
-            <option value="Toys">Toys</option>
-            <option value="Entertainment">Entertainment</option>
-        </select>
-    </section>
+            <select name="category" id="category" class="category">
+                <option value="Electronics">Electronics</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Furnitures">Furnitures</option>
+                <option value="Books">Books</option>
+                <option value="Music">Music</option>
+                <option value="Food">Food</option>
+                <option value="Toys">Toys</option>
+                <option value="Entertainment">Entertainment</option>
+            </select>
+        </section>
+
+        <div id="items-container">
+            <div class="card-container">
+            <img
+                id="img-product"
+                src="https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png"
+                alt="product Image"
+            />
+            <p id="description-product">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div id="card-product-footer">
+                <h2 id="price">50$</h2>
+                <div id="control-product">
+                <button id="btn-remove-product" class="btn" type="button">
+                    -
+                </button>
+                <h3 id="quantity-product">0</h3>
+                <button id="btn-add-product" class="btn" type="button">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="card-container">
+            <img
+                id="img-product"
+                src="https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png"
+                alt="product Image"
+            />
+            <p id="description-product">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div id="card-product-footer">
+                <h2 id="price">50$</h2>
+                <div id="control-product">
+                <button id="btn-remove-product" class="btn" type="button">
+                    -
+                </button>
+                <h3 id="quantity-product">0</h3>
+                <button id="btn-add-product" class="btn" type="button">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="card-container">
+            <img
+                id="img-product"
+                src="https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png"
+                alt="product Image"
+            />
+            <p id="description-product">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div id="card-product-footer">
+                <h2 id="price">50$</h2>
+                <div id="control-product">
+                <button id="btn-remove-product" class="btn" type="button">
+                    -
+                </button>
+                <h3 id="quantity-product">0</h3>
+                <button id="btn-add-product" class="btn" type="button">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="card-container">
+            <img
+                id="img-product"
+                src="https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png"
+                alt="product Image"
+            />
+            <p id="description-product">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div id="card-product-footer">
+                <h2 id="price">50$</h2>
+                <div id="control-product">
+                <button id="btn-remove-product" class="btn" type="button">
+                    -
+                </button>
+                <h3 id="quantity-product">0</h3>
+                <button id="btn-add-product" class="btn" type="button">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="card-container">
+            <img
+                id="img-product"
+                src="https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png"
+                alt="product Image"
+            />
+            <p id="description-product">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div id="card-product-footer">
+                <h2 id="price">50$</h2>
+                <div id="control-product">
+                <button id="btn-remove-product" class="btn" type="button">
+                    -
+                </button>
+                <h3 id="quantity-product">0</h3>
+                <button id="btn-add-product" class="btn" type="button">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="card-container">
+            <img
+                id="img-product"
+                src="https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png"
+                alt="product Image"
+            />
+            <p id="description-product">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div id="card-product-footer">
+                <h2 id="price">50$</h2>
+                <div id="control-product">
+                <button id="btn-remove-product" class="btn" type="button">
+                    -
+                </button>
+                <h3 id="quantity-product">0</h3>
+                <button id="btn-add-product" class="btn" type="button">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="card-container">
+            <img
+                id="img-product"
+                src="https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png"
+                alt="product Image"
+            />
+            <p id="description-product">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div id="card-product-footer">
+                <h2 id="price">50$</h2>
+                <div id="control-product">
+                <button id="btn-remove-product" class="btn" type="button">
+                    -
+                </button>
+                <h3 id="quantity-product">0</h3>
+                <button id="btn-add-product" class="btn" type="button">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="card-container">
+            <img
+                id="img-product"
+                src="https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png"
+                alt="product Image"
+            />
+            <p id="description-product">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div id="card-product-footer">
+                <h2 id="price">50$</h2>
+                <div id="control-product">
+                <button id="btn-remove-product" class="btn" type="button">
+                    -
+                </button>
+                <h3 id="quantity-product">0</h3>
+                <button id="btn-add-product" class="btn" type="button">+</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
     <script src="https://use.fontawesome.com/cf3935a44e.js"></script>
 </body>
 </html>
