@@ -4,18 +4,19 @@ let img_url = document.querySelector('#img_url');
 let category = document.querySelector('#category');
 let description = document.querySelector('#description');
 let add_btn = document.querySelector('#add_btn');
-let products = {
-    id: Date.now(),
-    name: "",
-    description: "",
-    price: 0,
-    img_url: "",
-    category: ""
-}
+// let products = {
+//     id: Date.now(),
+//     name: "",
+//     description: "",
+//     price: 0,
+//     img_url: "",
+//     category: ""
+// }
+let arrayOfProducts = []
 let i = 0;
 add_btn.addEventListener('click', (e) => {
     console.log(names.value);
-    products = {
+    let products = {
         id: Date.now(),
         name: names.value,
         description: description.value,
@@ -23,6 +24,7 @@ add_btn.addEventListener('click', (e) => {
         img_url: img_url.value,
         category: category.value,
     }
+    arrayOfProducts.push(products);
     window.localStorage.setItem(`${products.name}`, JSON.stringify(products));
     i++;
 
