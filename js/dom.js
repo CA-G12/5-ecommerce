@@ -123,27 +123,24 @@ function renderStaticProducts() {
     controlProduct.setAttribute("id", "control-product");
     footer.appendChild(controlProduct);
 
-    const removeBtn = document.createElement("button");
-    removeBtn.textContent = "-";
-    removeBtn.setAttribute("id", "btn-remove-product");
-    removeBtn.setAttribute("class", "btn");
-    controlProduct.appendChild(removeBtn);
+        const quantity  = document.createElement('h3');
+        quantity.setAttribute('id','quantity-product')
+        quantity.textContent = ele.quantity;
+        controlProduct.appendChild(quantity);
 
-    const quantity = document.createElement("h3");
-    quantity.setAttribute("id", "quantity-product");
-    quantity.textContent = "0";
-    controlProduct.appendChild(quantity);
-
-    const addBtn = document.createElement("button");
-    addBtn.setAttribute("id", "btn-add-product");
-    addBtn.setAttribute("class", "btn");
-    addBtn.textContent = "+";
-    controlProduct.appendChild(addBtn);
-
-    edit.addEventListener("click", function editProduct(element) {
-      sessionStorage.setItem("productID", element.target.parentElement.id);
-      location.replace("./form-add.html");
-    });
-  });
+        const addBtn = document.createElement('button')
+        addBtn.setAttribute('id','btn-add-product')
+        addBtn.setAttribute('class','btn')
+        addBtn.textContent = '+'
+        controlProduct.appendChild(addBtn);
+        addBtn.addEventListener('click',addToCart)
+        
+                const addBtnToLocal = document.createElement('button')
+                addBtnToLocal.setAttribute('id','btn-add-product')
+                addBtnToLocal.setAttribute('class','btn')
+                addBtnToLocal.textContent = 'add'
+                controlProduct.appendChild(addBtnToLocal);
+                addBtnToLocal.addEventListener('click',addToLocal)
+    })
 }
 renderStaticProducts();

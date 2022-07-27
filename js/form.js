@@ -1,3 +1,5 @@
+const addButton=document.querySelector('#add_btn')
+
 let i = 0;
 var selectedProductId = sessionStorage.getItem("productID");
 if (selectedProductId !== "null") {
