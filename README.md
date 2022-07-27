@@ -6,7 +6,6 @@ is app for ecommerce
 - as i user should be able to add to see my items
 - as i user should be able to see the items
 - as i seller should be able to delete any item
-- as i seller should be able to edit any item
 - as i seller should be able to add an item
 
 
