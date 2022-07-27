@@ -20,6 +20,7 @@
   --black: #000;
   --white: #fff;
   --red: #bc0606;
+  --green: #52ff5b;
 }
 * {
   margin: 0;
@@ -84,8 +85,8 @@ nav .logo {
 }
 
 .searchBox:hover > .searchButton {
-    background-color: #40616d;
-    color : #2f3640;
+  background-color: #40616d;
+  color: #2f3640;
 }
 .button-container {
   display: flex;
@@ -180,20 +181,20 @@ nav .logo {
 }
 
 /* End Styling Navbar */
-a{
-    text-decoration: none;
-    font-size: 17px;
-    letter-spacing: 1px;
+a {
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 1px;
 }
 
-.togglePage:hover{
-    border: none;
-    background-color:  #0096ce;
-    color: #fff;
-    box-shadow: 0 6.5px 22.5px 0 rgba(3, 17, 24, 0.502);
-    transform: scale(1.1);
-    transition: transform 100ms;
-    cursor: pointer;
+.togglePage:hover {
+  border: none;
+  background-color: #0096ce;
+  color: #fff;
+  box-shadow: 0 6.5px 22.5px 0 rgba(3, 17, 24, 0.502);
+  transform: scale(1.1);
+  transition: transform 100ms;
+  cursor: pointer;
 }
 
 /* End Styling Navbar */
