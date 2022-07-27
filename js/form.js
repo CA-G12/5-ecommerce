@@ -1,5 +1,8 @@
+const addButton=document.querySelector('#add_btn')
+
 let i = 0;
-add_btn.addEventListener('click', (e) => {
+if(addButton)
+addButton.addEventListener('click', (e) => {
     console.log(names.value);
     e.preventDefault()
     let products = {
@@ -9,6 +12,7 @@ add_btn.addEventListener('click', (e) => {
         price: price.value,
         img_url: img_url.value,
         category: category.value,
+        quantity: 0
     }
     console.log(products)
     staticProducts.push(products);
