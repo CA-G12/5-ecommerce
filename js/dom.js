@@ -12,62 +12,69 @@ const description = document.querySelector('#description');
 const add_btn = document.querySelector('#add_btn');
 
 const itemContainer = document.querySelector('#items-container');
+
 const staticProducts = [
     {
         id: Math.random(),
         name: 'Product 1',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: 20,
-        img_url:"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        img_url:"https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png",
         category: 'Clothes',
-    },
-    {
-        id: Math.random(),
-        name: 'Product 2',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        price: 20,
-        img_url:"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-        category: 'Clothes',
+        quantity : 0,
     },
     {
         id: Math.random(),
         name: 'Product 1',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: 20,
-        img_url:"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        img_url:"https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png",
         category: 'Clothes',
+        quantity : 0,
     },
     {
         id: Math.random(),
         name: 'Product 1',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: 20,
-        img_url:"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        img_url:"https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png",
         category: 'Clothes',
+        quantity : 0,
     },
     {
         id: Math.random(),
         name: 'Product 1',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: 20,
-        img_url:"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        img_url:"https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png",
         category: 'Clothes',
+        quantity : 0,
     },
     {
         id: Math.random(),
         name: 'Product 1',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: 20,
-        img_url:"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        img_url:"https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png",
         category: 'Clothes',
+        quantity : 0,
+    },
+    {
+        id: Math.random(),
+        name: 'Product 1',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        price: 20,
+        img_url:"https://www.transparentpng.com/thumb/shirt/jcsIrn-long-sleeved-t-shirt-collar-png.png",
+        category: 'Clothes',
+        quantity : 0,
     },
 ]
-
 function renderStaticProducts(){
 
     staticProducts.forEach((ele)=>{
         const shownProducts  = document.createElement('div');
         shownProducts.setAttribute('class','card-container')
+        shownProducts.setAttribute('id',ele.id)
         itemContainer.appendChild(shownProducts);
 
         const image  = document.createElement('img');
@@ -105,7 +112,7 @@ function renderStaticProducts(){
 
         const quantity  = document.createElement('h3');
         quantity.setAttribute('id','quantity-product')
-        quantity.textContent = '0';
+        quantity.textContent = ele.quantity;
         controlProduct.appendChild(quantity);
 
         const addBtn = document.createElement('button')
@@ -113,8 +120,14 @@ function renderStaticProducts(){
         addBtn.setAttribute('class','btn')
         addBtn.textContent = '+'
         controlProduct.appendChild(addBtn);
-
-
+        addBtn.addEventListener('click',addToCart)
+        
+                const addBtnToLocal = document.createElement('button')
+                addBtnToLocal.setAttribute('id','btn-add-product')
+                addBtnToLocal.setAttribute('class','btn')
+                addBtnToLocal.textContent = 'add'
+                controlProduct.appendChild(addBtnToLocal);
+                addBtnToLocal.addEventListener('click',addToLocal)
     })
 }
 renderStaticProducts();

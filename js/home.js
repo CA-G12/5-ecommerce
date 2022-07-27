@@ -1,33 +1,37 @@
-btnSignOut.addEventListener("click", signOut);
-
 function signOut() {
     location.replace("./index.html");
   }
 
-// // Add to Cart function
-// btnAddToCart.addEventListener("click", addToCart);
+let Cart = [];
 
-// let Cart = [];
-// localStorage.setItem("cart", JSON.stringify(Cart));
-// let product = {
-//   id: Date.now(),
-//   name: "",
-//   description: "",
-//   price: 0,
-//   img_url: "",
-//   category: "",
-//   quantity:0,
-// }
-
-// function addToCart() {
+localStorage.setItem("cart", JSON.stringify(Cart));
+const getProductById=(ele,id)=>{
+    const filterEle=ele.filter((e)=>{
+      return e.id==id
+    })
+    return filterEle
+  }
+  const CarLocal=localStorage.getItem('cart')
+  const carConvert=JSON.parse(CarLocal)
+function addToCart(e) {
+  const productId = e.target.parentNode.parentNode.parentNode.id
+  const car = getProductById(staticProducts, productId)
+  car[0].quantity = Number(car[0].quantity ) + 1;
+  car[0].quantity =`${car[0].quantity++}`;
+  // console.log(car[0])
+  // console.log(staticProducts,55555)
+  const itemContainer = document.querySelector('#items-container');
+  itemContainer.textContent=""
+  renderStaticProducts()
   
-//   const cartFetch = localStorage.getItem('cart');
-//   const carr= JSON.parse(cartFetch)
-//   const car = carr.filter((ele)=>{
-//     return  ele.id === btnAddToCart.target.id;
-//   });
-//   product.quantity = Number(product.quantity ) + 1;
-//   console.log(btnAddToCart);
-//   Cart.push(product);
-//   quantity.textContent =`${product.quantity}`;
-// }
+  // const 
+}
+const addToLocal=(e)=>{
+  const productId = e.target.parentNode.parentNode.parentNode.id
+
+  const car = getProductById(staticProducts, productId)
+  carConvert.push(car[0])
+  console.log( carConvert ,58585)
+  localStorage.setItem("cart",JSON.stringify(carConvert))
+
+}
