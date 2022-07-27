@@ -1,12 +1,8 @@
 btnSignOut.addEventListener("click", signOut);
 
-const isAdmin = localStorage.getItem("isAdmin");
-
-console.log("isAdmin", isAdmin, typeof isAdmin, isAdmin == "true");
-
-if (isAdmin == "true") {
-  console.log("isAdmin", isAdmin);
-  btnAddProduct.style.display = "block";
+if (isAdmin != "true") {
+  btnAddProduct.children[0].setAttribute("class", "fa fa-shopping-cart");
+  btnAddProduct.setAttribute("href", "./cart.html");
 }
 function signOut() {
   location.replace("./index.html");

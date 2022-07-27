@@ -5,6 +5,7 @@ const btnSignOut = document.getElementById("btnSignOut");
 const btnAddProduct = document.getElementById("btnAddProduct");
 const btnEditProduct = document.getElementById("btnEdit");
 
+//<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 // DOM Form
 const names = document.querySelector("#name");
 const price = document.querySelector("#price");
@@ -12,11 +13,14 @@ const img_url = document.querySelector("#img_url");
 const category = document.querySelector("#category");
 const description = document.querySelector("#description");
 const add_btn = document.querySelector("#add_btn");
+const btnCancel = document.getElementById("cancel_btn");
+
+const isAdmin = localStorage.getItem("isAdmin");
 
 const itemContainer = document.querySelector("#items-container");
-const staticProducts = [
+var staticProducts = [
   {
-    id: Math.random(),
+    id: 0,
     name: "Product 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -26,7 +30,7 @@ const staticProducts = [
     category: "Clothes",
   },
   {
-    id: Math.random(),
+    id: 1,
     name: "Product 2",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -36,7 +40,7 @@ const staticProducts = [
     category: "Clothes",
   },
   {
-    id: Math.random(),
+    id: 2,
     name: "Product 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -46,7 +50,7 @@ const staticProducts = [
     category: "Clothes",
   },
   {
-    id: Math.random(),
+    id: 3,
     name: "Product 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -56,7 +60,7 @@ const staticProducts = [
     category: "Clothes",
   },
   {
-    id: Math.random(),
+    id: 4,
     name: "Product 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -66,7 +70,7 @@ const staticProducts = [
     category: "Clothes",
   },
   {
-    id: Math.random(),
+    id: 5,
     name: "Product 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -78,6 +82,7 @@ const staticProducts = [
 ];
 
 function renderStaticProducts() {
+  staticProducts = JSON.parse(window.localStorage.getItem("ArrayOfProducts"));
   staticProducts.forEach((ele) => {
     const shownProducts = document.createElement("div");
     shownProducts.setAttribute("class", "card-container");
@@ -92,7 +97,9 @@ function renderStaticProducts() {
     const edit = document.createElement("i");
     edit.setAttribute("class", "btnEdit fa fa-pencil-square");
     edit.setAttribute("aria-hidden", "true");
-    shownProducts.appendChild(edit);
+    if (isAdmin == "true") {
+      shownProducts.appendChild(edit);
+    }
 
     const headLine = document.createElement("h3");
     headLine.textContent = ele.name;

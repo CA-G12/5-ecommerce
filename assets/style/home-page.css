@@ -256,19 +256,21 @@ a {
   height: 60px;
   bottom: 90px;
   right: 70px;
-  display: none;
+  align-items: center;
   background-color: var(--blue);
   color: var(--white);
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
+  display: flex;
+  justify-content: center;
 }
 .btnEdit {
   position: relative;
   font-size: 1.5em;
   top: -240px;
   left: 110px;
-  display: flex;
+  display: none;
   color: var(--blue);
   text-align: center;
   justify-content: center;
@@ -277,10 +279,6 @@ a {
 .float:hover {
   background-color: var(--white);
   color: var(--blue);
-}
-
-.my-float {
-  margin-top: 22px;
 }
 /* End Styling Drop down menu  */
 
