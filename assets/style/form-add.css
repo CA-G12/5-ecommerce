@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
 
 body {
-    font-family: 'Poppins','Times New Roman', Times, serif;
+  font-family: "Poppins", "Times New Roman", Times, serif;
   line-height: 1.5;
   background-color: #f1f3fb;
+  background-image: url("../joel-filipe-jU9VAZDGMzs-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   padding: 0 2rem;
 }
 
@@ -17,11 +21,12 @@ input {
 }
 
 .card {
-  margin: 2rem auto;
+  margin: 1rem auto;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 300px;
+  max-width: 600px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
@@ -31,7 +36,7 @@ input {
 .card-image {
   border-radius: 8px;
   overflow: hidden;
-  padding-bottom:40%;
+  padding-bottom: 40%;
   background-image: url("https://wallpaperaccess.com/full/2338264.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -39,22 +44,23 @@ input {
   position: relative;
 }
 
-.card-heading {
-  position: absolute;
-  left: 10%;
-  top: 15%;
-  right: 10%;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: black;
-  line-height: 1.222;
-  text-align: center;
-}
-
 .card-form {
-  padding: 0 1rem ;
+  padding: 0 1rem;
 }
-
+.name_price {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#name {
+  padding-left: 10px;
+}
+#price {
+  padding-right: 10px;
+}
 .input {
   display: flex;
   flex-direction: column-reverse;
@@ -77,9 +83,12 @@ input {
   z-index: 1;
   background-color: transparent;
   border-bottom: 2px solid #eee;
-  font: inherit;
   font-size: 1.125rem;
   padding: 0.25rem 0;
+}
+textarea {
+  max-width: 100%;
+  min-width: 100%;
 }
 .input-field:focus,
 :valid {
@@ -110,8 +119,38 @@ input {
 .action-button:focus {
   outline: 0;
 }
-.action-button:hover{
-  background-color: #787885;
+.action-button:hover {
+  color: black;
+  background-color: lightblue;
+  border: 1px black solid;
+  font-weight: 800;
 }
-
-
+#edit_btn.action-button {
+  font: inherit;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 1em;
+  width: 100%;
+  font-weight: 500;
+  background-color: #77a2e7;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+}
+#edit_btn.action-button:focus {
+  outline: 0;
+}
+#edit_btn.action-button:hover {
+  color: black;
+  background-color: lightblue;
+  border: 1px black solid;
+  font-weight: 800;
+}
+/* .display {
+  display: none;
+} */
+@media only screen and (max-width: 600px) {
+  .name_price {
+    display: block;
+  }
+}
