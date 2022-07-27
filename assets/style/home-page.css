@@ -20,6 +20,7 @@
   --black: #000;
   --white: #fff;
   --red: #bc0606;
+  --green: #52ff5b;
 }
 * {
   margin: 0;
@@ -249,36 +250,6 @@ a {
   font-size: 16px;
   align-self: flex-end;
   margin-right: 80px;
-}
-.float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 90px;
-  right: 70px;
-  align-items: center;
-  background-color: var(--blue);
-  color: var(--white);
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 3px #999;
-  display: flex;
-  justify-content: center;
-}
-.btnEdit {
-  position: relative;
-  font-size: 1.5em;
-  top: -240px;
-  left: 110px;
-  display: none;
-  color: var(--blue);
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.float:hover {
-  background-color: var(--white);
-  color: var(--blue);
 }
 /* End Styling Drop down menu  */
 
