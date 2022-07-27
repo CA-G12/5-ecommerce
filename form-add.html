@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style/form-add.css" />
     <link
-    rel="shortcut icon"
-    href="./assets/e-commerce icon.webp"
-    type="image/x-icon"
+      rel="shortcut icon"
+      href="./assets/e-commerce icon.webp"
+      type="image/x-icon"
     />
-    <title>Document</title>
+    <title>Form</title>
   </head>
   <body>
     <div class="container">
@@ -18,31 +18,38 @@
       <div class="card">
         <div class="card-image"></div>
         <form class="card-form">
-          <div class="input">
-            <input type="text" class="input-field" required />
-            <label class="input-label">Name</label>
+          <div class="name_price">
+            <div class="input">
+              <input id="name" type="text" class="input-field" />
+              <label class="input-label">Name</label>
+            </div>
+            <div class="input">
+              <!-- <span>$</span> -->
+              <input id="price" min="0" type="number" class="input-field" />
+              <label class="input-label">Price</label>
+            </div>
           </div>
           <div class="input">
-            <input type="number" class="input-field" required />
-            <label class="input-label">Price</label>
-          </div>
-          <div class="input">
-            <input type="url" class="input-field" required />
+            <input id="img_url" type="url" class="input-field" />
             <label class="input-label">Image URL</label>
           </div>
           <div class="input">
-            <input type="text" class="input-field" required />
+            <input id="category" type="text" class="input-field" />
             <label class="input-label">Category</label>
           </div>
           <div class="input">
-            <textarea class="input-field" rows="1"></textarea>
+            <textarea id="description" class="input-field" rows="1"></textarea>
             <label class="input-label">Description</label>
           </div>
           <div class="action">
-            <button class="action-button">Add</button>
+            <button id="add_btn" class="action-button">Add</button>
+          </div>
+          <div class="action display">
+            <button id="edit_btn" class="action-button">Edit</button>
           </div>
         </form>
       </div>
     </div>
+    <script src="js/dom.js"></script>
   </body>
 </html>
