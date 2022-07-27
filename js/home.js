@@ -5,39 +5,40 @@ if (isAdmin != "true") {
   btnAddProduct.setAttribute("href", "./cart.html");
 }
 function signOut() {
-    location.replace("./index.html");
-  }
+  location.replace("./index.html");
+}
 
-let Cart = [];
+
+const CarLocal = localStorage.getItem('cart')
+const carConvert = JSON.parse(CarLocal)
+let Cart = carConvert || [];
 
 localStorage.setItem("cart", JSON.stringify(Cart));
-const getProductById=(ele,id)=>{
-    const filterEle=ele.filter((e)=>{
-      return e.id==id
-    })
-    return filterEle
-  }
-  const CarLocal=localStorage.getItem('cart')
-  const carConvert=JSON.parse(CarLocal)
+const getProductById = (ele, id) => {
+  const filterEle = ele.filter((e) => {
+    return e.id == id
+  })
+  return filterEle
+}
 function addToCart(e) {
   const productId = e.target.parentNode.parentNode.parentNode.id
   const car = getProductById(staticProducts, productId)
-  car[0].quantity = Number(car[0].quantity ) + 1;
-  car[0].quantity =`${car[0].quantity++}`;
+  car[0].quantity = Number(car[0].quantity) + 1;
+  car[0].quantity = `${car[0].quantity++}`;
   // console.log(car[0])
   // console.log(staticProducts,55555)
   const itemContainer = document.querySelector('#items-container');
-  itemContainer.textContent=""
+  itemContainer.textContent = ""
   renderStaticProducts()
-  
+
   // const 
 }
-const addToLocal=(e)=>{
+const addToLocal = (e) => {
   const productId = e.target.parentNode.parentNode.parentNode.id
 
   const car = getProductById(staticProducts, productId)
-  carConvert.push(car[0])
-  console.log( carConvert ,58585)
-  localStorage.setItem("cart",JSON.stringify(carConvert))
+  Cart.push(car[0])
+  console.log(carConvert, 58585)
+  localStorage.setItem("cart", JSON.stringify(Cart))
 
 }
