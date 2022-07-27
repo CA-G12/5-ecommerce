@@ -1,8 +1,7 @@
-
-let arrayOfProducts = []
 let i = 0;
 add_btn.addEventListener('click', (e) => {
     console.log(names.value);
+    e.preventDefault()
     let products = {
         id: Date.now(),
         name: names.value,
@@ -11,7 +10,12 @@ add_btn.addEventListener('click', (e) => {
         img_url: img_url.value,
         category: category.value,
     }
-    arrayOfProducts.push(products);
-    window.localStorage.setItem('ArrayOfProducts', JSON.stringify(arrayOfProducts));
-    
+    console.log(products)
+    staticProducts.push(products);
+    window.localStorage.setItem('ArrayOfProducts', JSON.stringify(staticProducts));
+    names.value=""
+    description.value=""
+    price.value=""
+    img_url.value=""
+    category.value=""
 });
