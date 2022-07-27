@@ -1,10 +1,10 @@
 const addButton=document.querySelector('#add_btn')
 
-let arrayOfProducts = []
 let i = 0;
 if(addButton)
 addButton.addEventListener('click', (e) => {
     console.log(names.value);
+    e.preventDefault()
     let products = {
         id: Date.now(),
         name: names.value,
@@ -14,7 +14,12 @@ addButton.addEventListener('click', (e) => {
         category: category.value,
         quantity: 0
     }
-    arrayOfProducts.push(products);
-    window.localStorage.setItem('ArrayOfProducts', JSON.stringify(arrayOfProducts));
-    
+    console.log(products)
+    staticProducts.push(products);
+    window.localStorage.setItem('ArrayOfProducts', JSON.stringify(staticProducts));
+    names.value=""
+    description.value=""
+    price.value=""
+    img_url.value=""
+    category.value=""
 });
