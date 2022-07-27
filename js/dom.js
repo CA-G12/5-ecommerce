@@ -1,6 +1,7 @@
 const btnGoAsAdmin = document.getElementById("btnAdmin")
 const btnGoAsCustomer = document.getElementById("btnBuyer")
 const btnSignOut = document.getElementById("btnSignOut")
+const btnAddProduct = document.getElementById("btnAddProduct")
 
 let names = document.querySelector('#name');
 let price = document.querySelector('#price');

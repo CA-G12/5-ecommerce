@@ -84,8 +84,8 @@ nav .logo {
 }
 
 .searchBox:hover > .searchButton {
-    background-color: #40616d;
-    color : #2f3640;
+  background-color: #40616d;
+  color: #2f3640;
 }
 .button-container {
   display: flex;
@@ -180,20 +180,20 @@ nav .logo {
 }
 
 /* End Styling Navbar */
-a{
-    text-decoration: none;
-    font-size: 17px;
-    letter-spacing: 1px;
+a {
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 1px;
 }
 
-.togglePage:hover{
-    border: none;
-    background-color:  #0096ce;
-    color: #fff;
-    box-shadow: 0 6.5px 22.5px 0 rgba(3, 17, 24, 0.502);
-    transform: scale(1.1);
-    transition: transform 100ms;
-    cursor: pointer;
+.togglePage:hover {
+  border: none;
+  background-color: #0096ce;
+  color: #fff;
+  box-shadow: 0 6.5px 22.5px 0 rgba(3, 17, 24, 0.502);
+  transform: scale(1.1);
+  transition: transform 100ms;
+  cursor: pointer;
 }
 
 /* End Styling Navbar */
@@ -249,6 +249,28 @@ a{
   font-size: 16px;
   align-self: flex-end;
   margin-right: 80px;
+}
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 90px;
+  right: 70px;
+  display: none;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.float:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.my-float {
+  margin-top: 22px;
 }
 /* End Styling Drop down menu  */
 
