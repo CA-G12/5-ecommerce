@@ -1,6 +1,9 @@
-function signOut() {
-    location.replace("./index.html");
-  }
+const isAdmin = localStorage.getItem("isAdmin");
+
+
+// function signOut() {
+//     location.replace("./index.html");
+//   }
 
 let Cart = [];
 
@@ -35,3 +38,14 @@ const addToLocal=(e)=>{
   localStorage.setItem("cart",JSON.stringify(carConvert))
 
 }
+
+localStorage.setItem("productID", null);
+let data = JSON.parse(window.localStorage.getItem("ArrayOfProducts"));
+  if (data) {
+    staticProducts = data 
+  }
+
+  if (isAdmin != "true") {
+    btnAddProduct.children[0].setAttribute("class", "fa fa-shopping-cart");
+    btnAddProduct.setAttribute("href", "./cart.html");
+  }
