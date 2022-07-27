@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/index.css" />
     <link
-    rel="shortcut icon"
-    href="./assets/e-commerce icon.webp"
-    type="image/x-icon"
+      rel="shortcut icon"
+      href="./assets/e-commerce icon.webp"
+      type="image/x-icon"
     />
     <title>LandingPage</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="homepage-main flex">
-        <img src="./assets/landing.png" alt="" class="landing-img">
-        <section class="home-page-section flex">
-            <h1>WELCOME TO <br/> Storify</h1>
-            <div class="landing-page-button flex">
-                <button>Go as Seller</button>
-                <button>Go as Buyer</button>
-            </div>
-        </section>
+      <img src="./assets/landing.png" alt="" class="landing-img" />
+      <section class="home-page-section flex">
+        <h1>
+          WELCOME TO <br />
+          Storify
+        </h1>
+        <div class="landing-page-button flex">
+          <button id="btnAdmin" type="button">Go as Seller</button>
+          <button id="btnBuyer" type="button">Go as Buyer</button>
+        </div>
+      </section>
     </main>
-</body>
+    <script src="./js/dom.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
