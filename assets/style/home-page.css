@@ -266,3 +266,35 @@ footer p {
   margin-bottom: 16px;
   color: var(--blue);
 }
+
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 90px;
+  right: 70px;
+  align-items: center;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  display: flex;
+  justify-content: center;
+}
+.btnEdit {
+  position: relative;
+  font-size: 1.5em;
+  top: -240px;
+  left: 110px;
+  display: none;
+  color: var(--blue);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.float:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
