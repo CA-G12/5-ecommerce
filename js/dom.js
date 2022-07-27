@@ -28,6 +28,7 @@ var staticProducts = [
     img_url:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     category: "Clothes",
+    quantity: 0,
   },
   {
     id: 1,
@@ -38,6 +39,7 @@ var staticProducts = [
     img_url:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     category: "Clothes",
+    quantity: 0,
   },
   {
     id: 2,
@@ -48,6 +50,7 @@ var staticProducts = [
     img_url:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     category: "Clothes",
+    quantity: 0,
   },
   {
     id: 3,
@@ -58,6 +61,7 @@ var staticProducts = [
     img_url:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     category: "Clothes",
+    quantity: 0,
   },
   {
     id: 4,
@@ -68,6 +72,7 @@ var staticProducts = [
     img_url:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     category: "Clothes",
+    quantity: 0,
   },
   {
     id: 5,
@@ -78,6 +83,7 @@ var staticProducts = [
     img_url:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     category: "Clothes",
+    quantity: 0,
   },
 ];
 
@@ -123,24 +129,45 @@ function renderStaticProducts() {
     controlProduct.setAttribute("id", "control-product");
     footer.appendChild(controlProduct);
 
-        const quantity  = document.createElement('h3');
-        quantity.setAttribute('id','quantity-product')
-        quantity.textContent = ele.quantity;
-        controlProduct.appendChild(quantity);
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "-";
+    removeBtn.setAttribute("id", "btn-remove-product");
+    removeBtn.setAttribute("class", "btn");
+    controlProduct.appendChild(removeBtn);
 
-        const addBtn = document.createElement('button')
-        addBtn.setAttribute('id','btn-add-product')
-        addBtn.setAttribute('class','btn')
-        addBtn.textContent = '+'
-        controlProduct.appendChild(addBtn);
-        addBtn.addEventListener('click',addToCart)
-        
-                const addBtnToLocal = document.createElement('button')
-                addBtnToLocal.setAttribute('id','btn-add-product')
-                addBtnToLocal.setAttribute('class','btn')
-                addBtnToLocal.textContent = 'add'
-                controlProduct.appendChild(addBtnToLocal);
-                addBtnToLocal.addEventListener('click',addToLocal)
-    })
+    const quantity = document.createElement("h3");
+    quantity.setAttribute("id", "quantity-product");
+    quantity.textContent = "0";
+    controlProduct.appendChild(quantity);
+
+    const addBtn = document.createElement("button");
+    addBtn.setAttribute("id", "btn-add-product");
+    addBtn.setAttribute("class", "btn");
+    addBtn.textContent = "+";
+    controlProduct.appendChild(addBtn);
+
+    edit.addEventListener("click", function editProduct(element) {
+      sessionStorage.setItem("productID", element.target.parentElement.id);
+      location.replace("./form-add.html");
+      const quantity = document.createElement("h3");
+      quantity.setAttribute("id", "quantity-product");
+      quantity.textContent = ele.quantity;
+      controlProduct.appendChild(quantity);
+
+      const addBtn = document.createElement("button");
+      addBtn.setAttribute("id", "btn-add-product");
+      addBtn.setAttribute("class", "btn");
+      addBtn.textContent = "+";
+      controlProduct.appendChild(addBtn);
+      addBtn.addEventListener("click", addToCart);
+
+      const addBtnToLocal = document.createElement("button");
+      addBtnToLocal.setAttribute("id", "btn-add-product");
+      addBtnToLocal.setAttribute("class", "btn");
+      addBtnToLocal.textContent = "add";
+      controlProduct.appendChild(addBtnToLocal);
+      addBtnToLocal.addEventListener("click", addToLocal);
+    });
+  });
 }
 renderStaticProducts();

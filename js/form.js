@@ -1,4 +1,4 @@
-const addButton=document.querySelector('#add_btn')
+const addButton = document.querySelector("#add_btn");
 
 let i = 0;
 var selectedProductId = sessionStorage.getItem("productID");
@@ -20,31 +20,34 @@ if (selectedProductId !== "null") {
   category.setAttribute("placeholder", selectedProduct.category);
   description.setAttribute("placeholder", selectedProduct.description);
 }
-btnCancel.addEventListener("click", cancelOperation);
-add_btn.addEventListener("click", (e) => {
-  console.log(names.value);
-  let products = {
-    id: staticProducts.length,
-    name: names.value,
-    description: description.value,
-    price: price.value,
-    img_url: img_url.value,
-    category: category.value,
-  };
-  console.log(products);
-  staticProducts.push(products);
-  window.localStorage.setItem(
-    "ArrayOfProducts",
-    JSON.stringify(staticProducts)
-  );
-  names.value = "";
-  description.value = "";
-  price.value = "";
-  img_url.value = "";
-  category.value = "";
-  sessionStorage.setItem("productID", null);
-});
+if (btnCancel != null) {
+  btnCancel.addEventListener("click", cancelOperation);
 
-function cancelOperation() {
-  sessionStorage.setItem("productID", null);
+  add_btn.addEventListener("click", (e) => {
+    console.log(names.value);
+    let products = {
+      id: staticProducts.length,
+      name: names.value,
+      description: description.value,
+      price: price.value,
+      img_url: img_url.value,
+      category: category.value,
+    };
+    console.log(products);
+    staticProducts.push(products);
+    window.localStorage.setItem(
+      "ArrayOfProducts",
+      JSON.stringify(staticProducts)
+    );
+    names.value = "";
+    description.value = "";
+    price.value = "";
+    img_url.value = "";
+    category.value = "";
+    sessionStorage.setItem("productID", null);
+  });
+
+  function cancelOperation() {
+    sessionStorage.setItem("productID", null);
+  }
 }

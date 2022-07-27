@@ -5,8 +5,6 @@ if (isAdmin != "true") {
   btnAddProduct.setAttribute("href", "./cart.html");
 }
 function signOut() {
-  location.replace("./index.html");
-function signOut() {
     location.replace("./index.html");
   }
 
