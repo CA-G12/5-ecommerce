@@ -102,6 +102,7 @@ textarea {
 
 .action {
   margin-top: 2rem;
+  /* width: 100%; */
 }
 
 .action-button {
@@ -125,27 +126,29 @@ textarea {
   border: 1px black solid;
   font-weight: 800;
 }
-#edit_btn.action-button {
+
+#cancel_btn.action-button {
+  text-decoration: none;
+  display: block;
   font: inherit;
   text-align: center;
   font-size: 1.25rem;
-  padding: 1em;
-  width: 100%;
+  /* padding: 1em; */
+  width: 95%;
   font-weight: 500;
-  background-color: #77a2e7;
+  background-color: red;
   border-radius: 6px;
   color: #fff;
   border: 0;
 }
-#edit_btn.action-button:focus {
-  outline: 0;
-}
-#edit_btn.action-button:hover {
-  color: black;
-  background-color: lightblue;
+
+#cancel_btn.action-button:hover {
+  color: black ;
+  background-color: tomato;
   border: 1px black solid;
   font-weight: 800;
 }
+
 /* .display {
   display: none;
 } */

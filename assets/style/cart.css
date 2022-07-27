@@ -120,3 +120,8 @@
     display: flex;
     align-self: flex-end;
 }
+@media (max-width:600px) {
+    .cards-section {
+        flex-direction: column;
+    }
+}
