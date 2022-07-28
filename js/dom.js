@@ -1,7 +1,7 @@
 // DOM Index Page 
 const btnGoAsAdmin = document.getElementById("btnAdmin")
 const btnGoAsCustomer = document.getElementById("btnBuyer")
-const btnSignOut = document.getElementById("btnSignOut")
+const btnEditProduct = document.getElementById("btnEdit");
 
 // DOM Form
 const names = document.querySelector('#name');
@@ -13,7 +13,7 @@ const add_btn = document.querySelector('#add_btn');
 
 const itemContainer = document.querySelector('#items-container');
 
-const staticProducts = [
+const staticProducts =data || [
     {
         id: Math.random(),
         name: 'Product 1',
@@ -82,6 +82,13 @@ function renderStaticProducts(){
         image.setAttribute('src',`${ele.img_url}`);
         shownProducts.appendChild(image);
 
+        const edit = document.createElement("i");
+        edit.setAttribute("class", "btnEdit fa fa-pencil-square");
+        edit.setAttribute("aria-hidden", "true");
+        if (isAdmin == "true") 
+        shownProducts.appendChild(edit);
+        
+
         const headLine  = document.createElement('h3');
         headLine.textContent = ele.name;
         shownProducts.appendChild(headLine);
@@ -122,12 +129,12 @@ function renderStaticProducts(){
         controlProduct.appendChild(addBtn);
         addBtn.addEventListener('click',addToCart)
         
-                const addBtnToLocal = document.createElement('button')
-                addBtnToLocal.setAttribute('id','btn-add-product')
-                addBtnToLocal.setAttribute('class','btn')
-                addBtnToLocal.textContent = 'add'
-                controlProduct.appendChild(addBtnToLocal);
-                addBtnToLocal.addEventListener('click',addToLocal)
+        const addBtnToLocal = document.createElement('button')
+        addBtnToLocal.setAttribute('id','btn-add-product')
+        addBtnToLocal.setAttribute('class','btn')
+        addBtnToLocal.textContent = 'add'
+        controlProduct.appendChild(addBtnToLocal);
+        addBtnToLocal.addEventListener('click',addToLocal)
     })
 }
 renderStaticProducts();
