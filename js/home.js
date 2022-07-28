@@ -1,9 +1,10 @@
 const isAdmin = localStorage.getItem("isAdmin");
 
+btnSignOut.addEventListener("click", signOut);
 
-// function signOut() {
-//     location.replace("./index.html");
-//   }
+function signOut() {
+    location.replace("./index.html");
+  }
 
 
 const CarLocal = localStorage.getItem('cart')

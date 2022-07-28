@@ -6,6 +6,10 @@
   box-sizing: 0;
   font-family: "Poppins", "Times New Roman", Times, serif;
 }
+
+a{
+  text-decoration: none;
+}
 .flex {
   display: flex;
   justify-content: center;
